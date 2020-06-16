@@ -17,7 +17,7 @@ public class Tracker {
 
     private String generateId() {
         Random rm = new Random();
-        return String.valueOf(rm.nextLong()+System.currentTimeMillis());
+        return String.valueOf(rm.nextLong() + System.currentTimeMillis());
     }
 
     public Item[] findByName(String name) {
@@ -56,15 +56,11 @@ public class Tracker {
     }
 
     public boolean replace(String id, Item item) {
-        // Находим индекс
         int index = this.indexOf(id);
-        if (index != -1){
+        if (index != -1) {
             item.setId(id);
             this.items[index] = item;
-            return true;
         }
-        else {
-            return false;
-        }
+        return index != -1;
     }
 }
