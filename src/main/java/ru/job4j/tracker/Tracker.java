@@ -34,18 +34,37 @@ public class Tracker {
     }
 
     public Item findById(String id) {
-        Item rsl = null;
+        // Находим индекс
+        int index = indexOf(id);
+        // Если индекс найден возвращаем item, иначе null
+        return index != -1 ? items[index] : null;
+    }
+
+    public Item[] findAll() {
+        return Arrays.copyOf(items, size);
+    }
+
+    private int indexOf(String id) {
+        int rsl = -1;
         for (int index = 0; index < size; index++) {
-            Item item = items[index];
-            if (item.getId().equals(id)) {
-                rsl = item;
+            if (items[index].getId().equals(id)) {
+                rsl = index;
                 break;
             }
         }
         return rsl;
     }
 
-    public Item[] findAll() {
-        return Arrays.copyOf(items, size);
+    public boolean replace(String id, Item item) {
+        // Находим индекс
+        int index = this.indexOf(id);
+        if (index != -1){
+            item.setId(id);
+            this.items[index] = item;
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

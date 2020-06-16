@@ -19,8 +19,10 @@ public class TrackerTest {
         Tracker tracker = new Tracker();
         Item item = new Item("test2");
         tracker.add(item);
-        Item result = tracker.findByName(item.getName());
-        assertThat(result.getId(), is(item.getId()));
+        Item item1 = new Item("test2");
+        tracker.add(item1);
+        Item[] result = tracker.findByName(item.getName());
+        assertThat(result[0].getId(), is(item.getId()));
     }
 
     @Test
@@ -40,4 +42,15 @@ public class TrackerTest {
         assertThat(result[1].getId(), is(item1.getId()));
         assertThat(result[1].getName(), is(item1.getName()));
         }
+
+    @Test
+    public void whenReplace() {
+        Tracker tracker = new Tracker();
+        Item bug = new Item("Bug");
+        tracker.add(bug);
+        String id = bug.getId();
+        Item bugWithDesc = new Item("Bug with description");
+        tracker.replace(id, bugWithDesc);
+        assertThat(tracker.findById(id).getName(), is("Bug with description"));
+    }
 }
