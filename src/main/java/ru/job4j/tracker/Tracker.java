@@ -20,16 +20,17 @@ public class Tracker {
         return String.valueOf(rm.nextLong()+System.currentTimeMillis());
     }
 
-    public Item findByName(String name) {
-        Item rsl = null;
+    public Item[] findByName(String name) {
+        Item[] rsl = new Item[size];
+        int i = 0;
         for (int index = 0; index < size; index++) {
             Item item = items[index];
             if (item.getName().equals(name)) {
-                rsl = item;
-                break;
+                rsl[i] = item;
+                i++;
             }
         }
-        return rsl;
+        return Arrays.copyOf(rsl, i);
     }
 
     public Item findById(String id) {
