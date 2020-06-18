@@ -36,12 +36,15 @@ public class StartUI {
     public static void allItem(Tracker tracker){
         System.out.println("All ticket:");
         Item[] item  = tracker.findAll();
-        for (int i = 0; i < item.length; i++) {
-            System.out.println(item[i].getId() + " | " + item[i].getName());
-        }
+
         if (item.length == 0){
             System.out.println("Not found ticket !!!");
+        } else {
+            for (int i = 0; i < item.length; i++) {
+                System.out.println(item[i].getId() + " | " + item[i].getName());
+            }
         }
+
     }
 
     public static void findByIdItem(Input input, Tracker tracker){
@@ -56,11 +59,12 @@ public class StartUI {
     public static void findByNameItem(Input input, Tracker tracker){
         String name = input.askStr("Find ticket by Name. Enter Name: ");
         Item[] item  = tracker.findByName (name);
-        for (int i = 0; i < item.length; i++){
-            System.out.println(item[i].getId()+" | "+item[i].getName());
-        }
         if (item.length == 0){
             System.out.println("Not found !!!");
+        } else {
+            for (int i = 0; i < item.length; i++){
+                System.out.println(item[i].getId()+" | "+item[i].getName());
+            }
         }
     }
 
