@@ -8,6 +8,7 @@ public class UserStore {
             for(int i = 0; i < users.length; i++){
                 if (users[i].getUsername().equals(login)) {
                     rsl = users[i];
+                    break;
                 }
             }
 
@@ -18,8 +19,12 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (user.isValid() == false || user.getUsername().length() < 3 ) {
+        if (!user.isValid()) {
             throw new UserInvalidException("User don't valid !!! ");
+        }
+
+        if(user.getUsername().length() < 3 ) {
+            throw new UserInvalidException("User name less than 3 characters !!! ");
         }
         return true;
     }
