@@ -16,13 +16,13 @@ public class PhoneDictionary {
      */
     public ArrayList<Person> find(String key) {
         ArrayList<Person> result = new ArrayList<Person>();
-        for (int i = 0; i < this.persons.size(); i++) {
-            if ((this.persons.get(i).getName().contains(key)) ||
-                    (this.persons.get(i).getSurname().contains(key)) ||
-                    (this.persons.get(i).getPhone().contains(key)) ||
-                    (this.persons.get(i).getAddress().contains(key)))
+        for (Person value : this.persons) {
+            if ((value.getName().contains(key)) ||
+                    (value.getSurname().contains(key)) ||
+                    (value.getPhone().contains(key)) ||
+                    (value.getAddress().contains(key)))
             {
-                result.add(this.persons.get(i));
+                result.add(value);
             }
         }
         return result;
