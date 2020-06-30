@@ -30,15 +30,4 @@ public class ValidateInput implements Input {
         } while (invalid);
         return value;
     }
-
-    public static void main(String[] args) {
-        Output out = new StubOutput();
-        Input in = new StubInput(
-                new String[] {"2","444"}
-        );
-        ValidateInput input = new ValidateInput(out, in);
-        int selected = input.askInt("Enter menu:");
-
-       // System.out.println(input.ge);
-    }
 }
