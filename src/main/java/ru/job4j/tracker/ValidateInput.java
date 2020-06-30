@@ -34,11 +34,11 @@ public class ValidateInput implements Input {
     public static void main(String[] args) {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"zero", "0"}
+                new String[] {"2","444"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
 
-        System.out.println(selected);
+       // System.out.println(input.ge);
     }
 }
