@@ -59,7 +59,7 @@ public class Tracker {
         int index = this.indexOf(id);
         if (index != -1) {
             item.setId(id);
-            this.items.add(item);
+            this.items.set(index, item);
         }
         return index != -1;
     }
