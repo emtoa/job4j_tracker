@@ -16,6 +16,7 @@ public class test4 {
             lst1.add(new Item("Masha"));
             lst1.add(new Item("Glash"));
 
+
 //        List<Item> lst = Arrays.asList(new Item("Sasha"));
 //        System.out.println(lst.get(0).getName());
 
