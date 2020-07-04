@@ -35,7 +35,6 @@ public class Item implements Comparable<Item> {
 
     @Override
     public int compareTo(Item another) {
-        //return String.compare(getId(), another.getId());
-        return 0;
+        return this.name.compareTo(another.name);
     }
 }
