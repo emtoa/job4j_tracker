@@ -13,14 +13,14 @@ public class Matches {
         while (count > 0) {
             player = (i % 2) == 0 ? "Первый" : "Второй";
             i++;
-            System.out.println(player+" ваш ход : ");
+            System.out.println(player + " ваш ход : ");
             int select = Integer.valueOf(input.nextLine());
             if (select > count) {
-                System.out.println("Игрок "+player+" мухлевал игра окончена !!!");
+                System.out.println("Игрок " + player + " мухлевал игра окончена !!!");
                 break;
             }
             count -= select;
-            System.out.println("Всего спичек осталось : "+count);
+            System.out.println("Всего спичек осталось : " + count);
         }
     }
 }

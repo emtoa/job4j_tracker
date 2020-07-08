@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public class SortByNameItemAsc implements Comparator<Item> {
     @Override
-    public int compare (Item first, Item second){
+    public int compare(Item first, Item second) {
         return first.getName().compareTo(second.getName());
     }
 }

@@ -14,12 +14,12 @@ public class ItemSorter {
         );
 
         for (Item list :items) {
-            System.out.println(list.getId()+" "+list.getName());
+            System.out.println(list.getId() + " " + list.getName());
         }
         System.out.println("####################################");
         Collections.sort(items, new SortByNameItemAsc());
         for (Item list :items) {
-            System.out.println(list.getId()+" "+list.getName());
+            System.out.println(list.getId() + " " + list.getName());
         }
         System.out.println("####################################");
 
@@ -27,7 +27,7 @@ public class ItemSorter {
 
         Collections.sort(items, new SortByNameItemDesc());
         for (Item list :items) {
-            System.out.println(list.getId()+" "+list.getName());
+            System.out.println(list.getId() + " " + list.getName());
         }
     }
 }

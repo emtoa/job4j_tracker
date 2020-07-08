@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public class StringCompare implements Comparator<String> {
     @Override
-    public int compare (String left, String right){
+    public int compare(String left, String right) {
 
         int size = Math.min(left.length(), right.length());
         int result = left.length() - right.length();

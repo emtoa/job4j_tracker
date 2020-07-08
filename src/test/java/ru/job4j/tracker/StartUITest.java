@@ -28,14 +28,14 @@ public class StartUITest {
 
         new StartUI(output).init(in, tracker, actions);
         assertThat(output.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. === Show all ticket ====" + System.lineSeparator()+
-                        "1. === Exit Program ====" + System.lineSeparator()+
-                        "All ticket:" + System.lineSeparator()+
-                        item.getId()+" | Find all item"+ System.lineSeparator()+
-                        "Menu." + System.lineSeparator() +
-                        "0. === Show all ticket ====" + System.lineSeparator()+
-                        "1. === Exit Program ====" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                       + "0. === Show all ticket ====" + System.lineSeparator()
+                       + "1. === Exit Program ====" + System.lineSeparator()
+                       + "All ticket:" + System.lineSeparator()
+                       + item.getId() + " | Find all item" + System.lineSeparator()
+                       + "Menu." + System.lineSeparator()
+                       + "0. === Show all ticket ====" + System.lineSeparator()
+                       + "1. === Exit Program ====" + System.lineSeparator()
         ));
 
     }
@@ -59,13 +59,13 @@ public class StartUITest {
         new StartUI(output).init(in, tracker, actions);
 
         assertThat(output.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. === Find by Name ticket ====" + System.lineSeparator()+
-                        "1. === Exit Program ====" + System.lineSeparator()+
-                        item.getId()+" | Find by Name item"+ System.lineSeparator()+
-                        "Menu." + System.lineSeparator() +
-                        "0. === Find by Name ticket ====" + System.lineSeparator()+
-                        "1. === Exit Program ====" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. === Find by Name ticket ====" + System.lineSeparator()
+                        + "1. === Exit Program ====" + System.lineSeparator()
+                        + item.getId() + " | Find by Name item" + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. === Find by Name ticket ====" + System.lineSeparator()
+                        + "1. === Exit Program ====" + System.lineSeparator()
         ));
     }
 
@@ -88,13 +88,13 @@ public class StartUITest {
         new StartUI(output).init(in, tracker, actions);
 
         assertThat(output.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. === Find by ID ticket ====" + System.lineSeparator()+
-                        "1. === Exit Program ====" + System.lineSeparator()+
-                        "Ticket:"+item.getId()+" | Find by ID item"+ System.lineSeparator()+
-                        "Menu." + System.lineSeparator() +
-                        "0. === Find by ID ticket ====" + System.lineSeparator()+
-                        "1. === Exit Program ====" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. === Find by ID ticket ====" + System.lineSeparator()
+                        + "1. === Exit Program ====" + System.lineSeparator()
+                        + "Ticket:" + item.getId() + " | Find by ID item" + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. === Find by ID ticket ====" + System.lineSeparator()
+                        + "1. === Exit Program ====" + System.lineSeparator()
         ));
     }
 
@@ -110,8 +110,8 @@ public class StartUITest {
 
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. === Exit Program ====" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. === Exit Program ====" + System.lineSeparator()
         ));
     }
 
@@ -119,7 +119,7 @@ public class StartUITest {
     public void whenInvalidExit() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] { "20","0" }
+                new String[] {"20", "0"}
         );
         Tracker tracker = new Tracker();
 
@@ -130,10 +130,10 @@ public class StartUITest {
 
         assertThat(out.toString(), is(
                 String.format(
-                        "Menu.%n" +
-                         "0. === Exit Program ====%n" +
-                         "Wrong input, you can select: 0 .. 0%n" +
-                         "Menu.%n" +
-                         "0. === Exit Program ====%n")));
+                        "Menu.%n"
+                        + "0. === Exit Program ====%n"
+                        + "Wrong input, you can select: 0 .. 0%n"
+                        + "Menu.%n"
+                        + "0. === Exit Program ====%n")));
     }
 }

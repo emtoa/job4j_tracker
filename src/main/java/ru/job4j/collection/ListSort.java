@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ListSort {
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(5,2,1,6,3);
+        List<Integer> list = Arrays.asList(5, 2, 1, 6, 3);
 
         System.out.println(list);
 

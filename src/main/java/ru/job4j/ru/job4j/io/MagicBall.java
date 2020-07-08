@@ -16,7 +16,7 @@ public class MagicBall {
             str = "Да";
         } else if (answer == 1) {
             str = "Нет";
-        } else{
+        } else {
             str = "Может быть";
         }
 

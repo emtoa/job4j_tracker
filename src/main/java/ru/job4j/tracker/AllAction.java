@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class AllAction implements UserAction {
     private final Output out;
 
-    public AllAction(Output out){
+    public AllAction(Output out) {
         this.out = out;
     }
 
@@ -20,7 +20,7 @@ public class AllAction implements UserAction {
         out.println("All ticket:");
         List<Item> item  = tracker.findAll();
 
-        if (item.size() == 0){
+        if (item.size() == 0) {
             out.println("Not found ticket !!!");
         } else {
             for (Item value : item) {

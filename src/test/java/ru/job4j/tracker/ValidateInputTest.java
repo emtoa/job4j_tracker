@@ -26,7 +26,7 @@ public class ValidateInputTest {
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
-        System.out.println(" = "+out.toString());
+        System.out.println(" = " + out.toString());
         assertThat(selected, is(2));
     }
 }
