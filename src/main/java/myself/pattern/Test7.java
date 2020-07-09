@@ -13,7 +13,7 @@ import ru.job4j.tracker.Item;
 import java.util.HashMap;
 import java.util.Map;
 
-public class test7 {
+public class Test7 {
 
     public static void main(String[] args) {
         List<Account> accounts = new ArrayList<>();

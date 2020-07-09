@@ -4,7 +4,7 @@ import  ru.job4j.collection.*;
 import java.util.HashSet;
 import java.util.List;
 
-public class test6 {
+public class Test6 {
     public static void main(String[] args) {
         HashSet<Account> rsl = new HashSet<>();
 

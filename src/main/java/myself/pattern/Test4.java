@@ -7,7 +7,7 @@ import java.util.List;
 import ru.job4j.search.*;
 import ru.job4j.tracker.Item;
 
-public class test4 {
+public class Test4 {
 
     public static void main(String[] args) {
 

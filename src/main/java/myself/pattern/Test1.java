@@ -3,7 +3,7 @@ package myself.pattern;
 import java.util.*;
 import java.lang.reflect.*;
 
-public class test1 {
+public class Test1 {
     public static void main(String[] arguments) {
         List<String> list = new ArrayList<>();
         List<String> decorated = Collections.checkedList(list, String.class);

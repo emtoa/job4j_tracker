@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.TreeSet;
 import java.util.Set;
 
-public class test8 {
+public class Test8 {
     public static void main(String[] args) {
         Set<Integer> numbers = new TreeSet<>();
 
