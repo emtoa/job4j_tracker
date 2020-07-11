@@ -1,21 +1,21 @@
 package ru.job4j.collection;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+
 
 public class Article {
     public static boolean generateBy(String origin, String line) {
 
         String[] fnd = line.split(" ");
         String[] org = origin.split(" ");
-        ArrayList<String> str = new ArrayList<>();
+        HashSet<String> str = new HashSet<>();
 
         for (String original : org) {
             str.add(original);
         }
 
         for (String value : fnd) {
-            if (!str.toString().contains(value)) {
+            if (!str.contains(value)) {
                 return false;
             }
         }
