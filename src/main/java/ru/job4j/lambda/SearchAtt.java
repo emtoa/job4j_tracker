@@ -14,7 +14,7 @@ public class SearchAtt {
         Predicate<Attachment> func = new Predicate<Attachment>()  {
             @Override
             public boolean test(Attachment att) {
-                return (att.getSize() > 100) ? true : false;
+                return (att.getSize() > 100);
             }
         };
         return filter(list, func);
