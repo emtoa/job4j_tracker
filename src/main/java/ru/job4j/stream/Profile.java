@@ -3,7 +3,7 @@ package ru.job4j.stream;
 public class Profile {
     private Address address;
 
-    public Address getAddress(){
+    public Address getAddress() {
         return this.address;
     }
 }
