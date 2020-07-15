@@ -10,6 +10,6 @@ public class StreamUsage {
 
         List<Integer> result = tasks.stream().filter(task -> task >= 0).collect(Collectors.toList());
 
-        result.forEach(System.out::println);
+        result.stream().map(t -> t).forEach(System.out::println);
     }
 }
