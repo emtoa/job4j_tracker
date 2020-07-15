@@ -8,6 +8,6 @@ import java.util.stream.Collectors;
 public class Profiles {
     public static List<Address> collect(List<Profile> profiles) {
 
-        return profiles.stream().map(t -> t.address).collect(Collectors.toList());
+        return profiles.stream().map(t -> t.getAddress()).collect(Collectors.toList());
     }
 }
