@@ -4,7 +4,6 @@ import ru.job4j.stream.*;
 import ru.job4j.stream.Student;
 
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Test15 {
