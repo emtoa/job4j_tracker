@@ -22,6 +22,7 @@ public class Card {
         );
 
         Stream.of(Suit.values())
+                .flatMap(Stream::ofNullable)
                 .forEach(System.out::println);
     }
 }
