@@ -5,6 +5,7 @@ import myself.pattern.Person;
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class School {
     public static List<Student> collect(List<Student> students, Predicate<Student> predict) {
@@ -30,5 +31,15 @@ public class School {
                 .collect(Collectors.toMap(s -> s.getSurname(), s -> s,
                         (x, y) -> x, LinkedHashMap::new));
         map.forEach((x, y) -> System.out.println("Key: " + x +", value: "+ y.getScore()));
+    }
+
+    public List<Student> levelOf(List<Student> students, int bound) {
+
+        return students.stream()
+                .flatMap(Stream::ofNullable)
+                .sorted()
+                .filter(s -> s.getScore() > bound)
+                .collect(Collectors.toList());
+
     }
 }

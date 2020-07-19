@@ -72,4 +72,25 @@ public class SchoolTest {
         List<Student> result = School.collect(stud, predic);
         assertThat(result, is(expect));
     }
+
+    @Test
+    public void whenMore70() {
+        List<Student> stud = List.of(
+                new Student("Ivanov", 40),
+                new Student("Petrov", 50),
+                new Student("Sidorov", 71),
+                new Student("Ilin", 49),
+                new Student("Popov", 69),
+                new Student("Smirnov", 100)
+        );
+
+        List<Student> expect = List.of(
+                new Student("Sidorov", 71),
+                new Student("Smirnov", 100)
+        );
+
+        Predicate<Student> predic = p -> p.getScore() >= 70 && p.getScore() <= 100;
+        List<Student> result = School.collect(stud, predic);
+        assertThat(result, is(expect));
+    }
 }
